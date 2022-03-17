@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div> 
+        <input type="button" id="btnJson" value="Veri Getir" />
+    </div>
+    <script>
+
+        $(function() {
+
+            $("#btnJson").click(
+                function () {
+                    $.ajax({
+                        type: "GET",
+                        url: "Index2",
+                        contentType:"application/json; charset=utf-8 ",
+                        dataType: "json",
+                        success: function (result) {
+                            alert(result.ID);
+                            alert(result.Adi);
+                            alert(result.Fiyat);
+                            alert(result.Aciklama);
+
+                        }
+
+                    });
+
+                })
+
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AnaSayfa</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("ad", "", new { placeholder = "Adınız" })<br />
+            @Html.TextBox("soyad", "", new { placeholder = "Soyadınız" })<br />
+            <hr />
+            <button type="submit">Kaydet</button>
+        }
+    </div>
+    <div>
+        <hr />
+    </div>
+    <div>
+        @if(ViewBag.liste!=null)
+            {
+        <ul>
+            @foreach (var item in ViewBag.liste)
+            {
+                <li>
+                    @item
+                </li>
+            }
+
+        </ul>
+            }
+    </div>
+</body>
+</html>

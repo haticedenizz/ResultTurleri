@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div> 
+        <h2> Ana Sayfa </h2>
+        <hr />
+    </div>
+    <div>
+        @*@Html.Partial("_KategorilerPartial")*@
+        @Html.Action("KategorileriGetir")
+        <hr />
+        @Html.Action("KategorileriGetir2")
+    </div>
+</body>
+</html>

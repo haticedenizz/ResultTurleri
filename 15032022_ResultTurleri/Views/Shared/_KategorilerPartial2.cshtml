@@ -1,0 +1,11 @@
+﻿@model List<string>
+
+<ul class="list-group">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+            <a href="/Home5/Kategori?ad=@item">@item</a>
+        </li>
+    }
+
+</ul>
